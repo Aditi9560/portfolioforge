@@ -1,0 +1,27 @@
+import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core';
+
+export const portfolios = sqliteTable('portfolios', {
+  id:             text('id').primaryKey(),
+  slug:           text('slug').unique().notNull(),
+  name:           text('name').notNull(),
+  title:          text('title'),
+  bio:            text('bio'),
+  photo_url:      text('photo_url'),
+  resume_url:     text('resume_url'),
+  phone:          text('phone'),
+  email:          text('email'),
+  github_url:     text('github_url'),
+  linkedin_url:   text('linkedin_url'),
+  twitter_url:    text('twitter_url'),
+  location:       text('location'),
+  skills:         text('skills').default('[]'),
+  projects:       text('projects').default('[]'),
+  experience:     text('experience').default('[]'),
+  education:      text('education').default('[]'),
+  certifications: text('certifications').default('[]'),
+  theme:          text('theme').default('dark'),
+  accent_color:   text('accent_color').default('#10b981'),
+  views:          integer('views').default(0),
+  created_at:     text('created_at').default(new Date().toISOString()),
+  updated_at:     text('updated_at').default(new Date().toISOString()),
+});
