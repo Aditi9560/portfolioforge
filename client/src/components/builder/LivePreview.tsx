@@ -1,5 +1,5 @@
-import { useFormContext, useWatch } from 'react-hook-form';
-import { Mail, MapPin, Github, Linkedin, Twitter, Globe, ExternalLink } from 'lucide-react';
+import { useWatch } from 'react-hook-form';
+import { Mail, MapPin, Github, Linkedin, Globe, ExternalLink } from 'lucide-react';
 import { clsx } from 'clsx';
 import type { AboutValues, Skill, Project, ExperienceEntry, EducationEntry, CertEntry } from './types';
 import { CATEGORY_COLORS } from './types';
